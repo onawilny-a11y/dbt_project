@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: wh_customers # <-- нова назва моделі
+    description: "Фінальна модель клієнтів рівня Warehouse"
+    config:
+      materialized: table # <-- робимо її таблицею
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
